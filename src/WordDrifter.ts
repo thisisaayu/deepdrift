@@ -333,7 +333,6 @@ export class WordDrifter {
   }
 
   resize(w: number, h: number) {
-    const isSmall = w < 720
     const dprMax = Math.min(window.devicePixelRatio || 1, 2)
     this.dpr = Math.max(1, Math.min(dprMax, Math.sqrt(4.2e6 / Math.max(1, w * h))))
     this.sprites.clear()
@@ -341,10 +340,10 @@ export class WordDrifter {
     this.H = h
     this.canvas.width = Math.round(w * this.dpr)
     this.canvas.height = Math.round(h * this.dpr)
-    this.scale = Math.min(h * 0.74, w * (isSmall ? 1.15 : 0.90))
+    this.scale = Math.min(h * 0.74, w * 0.90)
     this.fontScale = Math.max(0.80, Math.min(1.20, this.scale / 600))
     // Anchor position: centered in the viewport
-    this.center = { x: w * (isSmall ? 0.5 : 0.52), y: h * (isSmall ? 0.48 : 0.49) }
+    this.center = { x: w * 0.52, y: h * 0.49 }
 
     const isInitial = this.particles.length === 0
     if (isInitial) {

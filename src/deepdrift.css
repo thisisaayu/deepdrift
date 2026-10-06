@@ -371,45 +371,6 @@ html.lenis, html.lenis body {
   transform: rotate(35deg) scale(1.18);
 }
 
-/* ------------------------------------------------ Responsive adjustments */
-@media (max-width: 900px) {
-  .dd-headline {
-    font-size: clamp(38px, 8vw, 70px);
-  }
-}
-
-@media (max-width: 720px) {
-  .dd-kicker {
-    top: 18px;
-    font-size: 9px;
-    gap: 8px;
-  }
-  .dd-kicker span:last-child {
-    display: none;
-  }
-  .dd-headline {
-    top: 55px;
-    left: 20px;
-    transform: none;
-    font-size: clamp(28px, 7.5vw, 38px);
-  }
-  .dd-register {
-    top: 55px;
-    right: 20px;
-    bottom: auto;
-    transform: none;
-  }
-  .dd-register__count {
-    font-size: 24px;
-  }
-  .dd-scrollhint {
-    display: none;
-  }
-  .dd-recollection {
-    bottom: 24px;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .dd-aura,
   .dd-grain,
