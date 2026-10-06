@@ -334,7 +334,7 @@ export class WordDrifter {
 
   resize(w: number, h: number) {
     const isSmall = w < 720
-    const dprMax = Math.min(window.devicePixelRatio || 1, isSmall ? 1.5 : 2)
+    const dprMax = Math.min(window.devicePixelRatio || 1, 2)
     this.dpr = Math.max(1, Math.min(dprMax, Math.sqrt(4.2e6 / Math.max(1, w * h))))
     this.sprites.clear()
     this.W = w
